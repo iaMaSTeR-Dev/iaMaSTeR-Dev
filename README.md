@@ -19,18 +19,17 @@
 ```typescript
 const developer = {
     username: "iaMaSTeR",
-    occupation: "Software Engineer",
-    approach: "Engineering over shortcuts",
+    role: "Independent Software Developer",
 
     interests: [
-        "Software Architecture",
-        "Backend Engineering",
-        "Full-Stack Development",
-        "Network & Systems Engineering",
+        "Software Engineering",
+        "System Design",
+        "Backend Development",
+        "Networking",
         "Application Security"
     ],
 
-    philosophy: "Understand deeply. Build properly."
+    philosophy: "Learn. Build. Improve."
 };
 
 export default developer;
