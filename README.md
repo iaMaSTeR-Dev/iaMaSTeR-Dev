@@ -1,57 +1,106 @@
 
 <div align="center">
   <img src="assets/mast-ide.svg" alt="MAST//IDE — iaMaSTeR Developer Workspace" width="100%" />
-</div>
 
-<br/>
+  <br/>
 
-<div align="center">
+  <h3>Independent Software Developer</h3>
 
-### Independent Software Developer
+  <p>
+    Building software. Exploring ideas. Solving problems.
+  </p>
 
-I build software, explore ideas, and turn them into working projects.
-
-[GitHub Profile](https://github.com/iaMaSTeR-Dev)
-
+  <a href="https://github.com/iaMaSTeR-Dev">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="https://t.me/iaMaSTeRDev">Telegram</a>
 </div>
 
 ---
 
-## `01` / Selected Projects
+## `01` / About
 
-A selection of projects I'm working on.
+I'm a self-taught developer passionate about solving problems with code.
+
+I enjoy exploring ideas, building practical software, and continuously improving the way I design and develop applications.
+
+**Current interests:** Software development, problem-solving, and software architecture.
+
+---
+
+## `02` / Selected Projects
+
+A couple of projects from my workspace.
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3>◈ Senora</h3>
-      <p>A privacy-focused messaging project.</p>
-      <a href="https://github.com/iaMaSTeR-Dev/Senora">View Repository →</a>
+      <p>
+        A software project built with TypeScript.
+      </p>
+      <a href="https://github.com/iaMaSTeR-Dev/Senora">
+        <strong>Explore Repository →</strong>
+      </a>
     </td>
     <td width="50%" valign="top">
       <h3>◈ FileStreamBot</h3>
-      <p>A Telegram bot project for generating file streaming links.</p>
-      <a href="https://github.com/iaMaSTeR-Dev/FileStreamBot">View Repository →</a>
+      <p>
+        A Telegram bot that generates direct, streamable links for files.
+      </p>
+      <a href="https://github.com/iaMaSTeR-Dev/FileStreamBot">
+        <strong>Explore Repository →</strong>
+      </a>
     </td>
   </tr>
 </table>
 
 ---
 
-## `02` / About
+## `03` / What I Work On
 
-I'm an independent developer interested in building practical software and working through engineering challenges.
-
-I value clear architecture, thoughtful implementation, and continuous improvement.
+- Building and improving software projects.
+- Exploring technical ideas and practical solutions.
+- Writing code with an emphasis on clarity and maintainability.
+- Learning, experimenting, and refining my development workflow.
 
 ---
 
-## `03` / Connect
+## `04` / Tech Interests
+
+Currently focused on:
+
+- JavaScript
+- TypeScript
+- PHP
+- Python
+
+---
+
+## `05` / Connect
+
+Have a question, an idea, or something worth building together?
+
+The best ways to reach me:
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>GitHub</strong><br/>
+      <a href="https://github.com/iaMaSTeR-Dev">@iaMaSTeR-Dev</a><br/>
+      <sub>Code, projects, and collaboration</sub>
+    </td>
+    <td width="50%">
+      <strong>Telegram</strong><br/>
+      <a href="https://t.me/iaMaSTeRDev">@iaMaSTeRDev</a><br/>
+      <sub>Direct contact and conversations</sub>
+    </td>
+  </tr>
+</table>
+
+---
 
 <div align="center">
-
-[GitHub](https://github.com/iaMaSTeR-Dev)
-
-<sub>MAST//IDE · Built with intention.</sub>
-
+  <sub>
+    MAST//IDE · Designed around building.
+  </sub>
 </div>
