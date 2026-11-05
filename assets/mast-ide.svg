@@ -1,99 +1,300 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title desc">
-  <title id="title">MAST//IDE — iaMaSTeR</title>
-  <desc id="desc">A custom dark IDE workspace showing the developer profile, two selected projects, and contact links.</desc>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1000"
+     height="430"
+     viewBox="0 0 1000 430">
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#191e29"/>
-      <stop offset="1" stop-color="#10131a"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#171b27"/>
+      <stop offset="100%" stop-color="#10131c"/>
     </linearGradient>
+
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#202638"/>
+      <stop offset="100%" stop-color="#191e2b"/>
+    </linearGradient>
+
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#78a9ff"/>
-      <stop offset="1" stop-color="#b69cff"/>
+      <stop offset="0%" stop-color="#6c8cff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
-    <clipPath id="window">
-      <rect x="1" y="1" width="998" height="388" rx="12"/>
+
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#648cff" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="editorClip">
+      <rect x="270" y="96" width="510" height="230"/>
     </clipPath>
+
+    <style>
+      .ui {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        fill: #c7cede;
+      }
+      .mono {
+        font-family: Consolas, 'Courier New', monospace;
+      }
+      .muted { fill: #69758b; }
+      .white { fill: #e8ecf5; }
+      .blue { fill: #82aaff; }
+      .purple { fill: #c792ea; }
+      .green { fill: #c3e88d; }
+      .orange { fill: #ffcb8b; }
+      .cyan { fill: #89ddff; }
+      .pink { fill: #f07178; }
+      .line {
+        stroke: #2a3142;
+        stroke-width: 1;
+      }
+      .small { font-size: 10px; }
+      .code { font-size: 12px; }
+    </style>
   </defs>
 
-  <g clip-path="url(#window)">
-    <rect width="1000" height="390" fill="url(#bg)"/>
-    <rect x="1" y="1" width="998" height="388" rx="12" fill="none" stroke="#343b4a"/>
+  <!-- Main frame -->
+  <rect x="1" y="1" width="998" height="428" rx="12"
+        fill="url(#background)" stroke="#30394d"/>
 
-    <!-- Title bar -->
-    <rect width="1000" height="44" fill="#202530"/>
-    <circle cx="22" cy="22" r="5" fill="#ff6259"/>
-    <circle cx="40" cy="22" r="5" fill="#ffc04d"/>
-    <circle cx="58" cy="22" r="5" fill="#35c96f"/>
-    <text x="500" y="26" fill="#aab5c7" font-family="Consolas, monospace" font-size="12" text-anchor="middle">MAST//IDE — iaMaSTeR — Workspace</text>
+  <!-- Ambient accent -->
+  <rect x="1" y="1" width="998" height="428" rx="12"
+        fill="url(#glow)"/>
 
-    <!-- Activity bar -->
-    <rect x="0" y="44" width="49" height="308" fill="#191e27"/>
-    <rect x="0" y="59" width="3" height="26" fill="#82aaff"/>
-    <g fill="none" stroke="#8793a7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="16" y="64" width="17" height="16" rx="2"/>
-      <circle cx="24" cy="112" r="8"/>
-      <path d="M15 158 L24 149 L33 158 L24 167 Z"/>
-      <path d="M15 202 H33 M15 208 H33 M15 214 H27"/>
-      <circle cx="24" cy="257" r="8"/>
-      <path d="M24 252 V262 M19 257 H29"/>
-    </g>
+  <!-- Top bar -->
+  <path d="M13 1 H987 Q999 1 999 13 V48 H1 V13 Q1 1 13 1Z"
+        fill="url(#topbar)"/>
 
-    <!-- Explorer -->
-    <rect x="49" y="44" width="205" height="308" fill="#1c222d"/>
-    <text x="66" y="69" fill="#a3adbd" font-family="Consolas, monospace" font-size="10" letter-spacing="1.4">EXPLORER</text>
-    <text x="66" y="101" fill="#dce3ef" font-family="Consolas, monospace" font-size="12">⌄  iaMaSTeR</text>
+  <circle cx="22" cy="24" r="5" fill="#ff5f57"/>
+  <circle cx="40" cy="24" r="5" fill="#febc2e"/>
+  <circle cx="58" cy="24" r="5" fill="#28c840"/>
 
-    <text x="82" y="132" fill="#83aaff" font-family="Consolas, monospace" font-size="11">⌄  projects</text>
-    <circle cx="96" cy="156" r="3" fill="#b69cff"/>
-    <text x="108" y="160" fill="#d9c7a2" font-family="Consolas, monospace" font-size="11">Senora</text>
-    <circle cx="96" cy="183" r="3" fill="#83c99a"/>
-    <text x="108" y="187" fill="#d9c7a2" font-family="Consolas, monospace" font-size="11">FileStreamBot</text>
+  <text x="82" y="28" class="ui" font-size="12" font-weight="600">
+    MAST//IDE
+  </text>
 
-    <text x="82" y="226" fill="#83aaff" font-family="Consolas, monospace" font-size="11">⌄  profile</text>
-    <text x="101" y="252" fill="#9bc88e" font-family="Consolas, monospace" font-size="11">◈ about.ts</text>
-    <text x="101" y="278" fill="#9bc88e" font-family="Consolas, monospace" font-size="11">◈ README.md</text>
-    <text x="66" y="335" fill="#657187" font-family="Consolas, monospace" font-size="9">WORKSPACE / 01</text>
+  <text x="500" y="28" class="ui muted" font-size="11" text-anchor="middle">
+    iaMaSTeR-Dev — Profile Workspace
+  </text>
 
-    <!-- Tabs -->
-    <rect x="254" y="44" width="746" height="36" fill="#1b202a"/>
-    <rect x="254" y="44" width="133" height="36" fill="#252c38"/>
-    <rect x="254" y="77" width="133" height="2" fill="url(#accent)"/>
-    <text x="270" y="66" fill="#c9d8ee" font-family="Consolas, monospace" font-size="11">◈ about.ts</text>
-    <text x="407" y="66" fill="#7d899c" font-family="Consolas, monospace" font-size="11">README.md</text>
+  <rect x="884" y="14" width="94" height="21" rx="5"
+        fill="#242d40" stroke="#35415a"/>
+  <circle cx="897" cy="24.5" r="3" fill="#8bd5a5"/>
+  <text x="907" y="28" class="ui small">Workspace</text>
 
-    <!-- Editor -->
-    <rect x="254" y="80" width="746" height="272" fill="#151922"/>
-    <g font-family="Consolas, monospace" font-size="13">
-      <g fill="#586579" text-anchor="end">
-        <text x="291" y="111">1</text>
-        <text x="291" y="137">2</text>
-        <text x="291" y="163">3</text>
-        <text x="291" y="189">4</text>
-        <text x="291" y="215">5</text>
-        <text x="291" y="241">6</text>
-        <text x="291" y="267">7</text>
-        <text x="291" y="293">8</text>
-        <text x="291" y="319">9</text>
-      </g>
+  <!-- Activity bar -->
+  <rect x="1" y="48" width="40" height="381" fill="#141925"/>
+  <line x1="41" y1="48" x2="41" y2="429" class="line"/>
 
-      <text x="310" y="111" fill="#c792ea">export const <tspan fill="#82aaff">developer</tspan> = {</text>
-      <text x="310" y="137" fill="#9cdcfe">  role: <tspan fill="#ce9178">"Independent Software Developer"</tspan>,</text>
-      <text x="310" y="163" fill="#9cdcfe">  handle: <tspan fill="#ce9178">"iaMaSTeR"</tspan>,</text>
-      <text x="310" y="189" fill="#9cdcfe">  projects: [</text>
-      <text x="310" y="215" fill="#ce9178">    "Senora",</text>
-      <text x="310" y="241" fill="#ce9178">    "FileStreamBot"</text>
-      <text x="310" y="267" fill="#9cdcfe">  ],</text>
-      <text x="310" y="293" fill="#9cdcfe">  contact: <tspan fill="#ce9178">"GitHub / Telegram"</tspan></text>
-      <text x="310" y="319" fill="#c792ea">};</text>
-    </g>
+  <rect x="1" y="65" width="3" height="28" rx="1.5" fill="url(#accent)"/>
 
-    <!-- Terminal -->
-    <rect x="254" y="352" width="746" height="38" fill="#202530"/>
-    <line x1="254" y1="352" x2="1000" y2="352" stroke="#343b4a"/>
-    <text x="271" y="375" fill="#a4afc1" font-family="Consolas, monospace" font-size="10" letter-spacing="1">TERMINAL</text>
-    <text x="380" y="375" fill="#86c995" font-family="Consolas, monospace" font-size="11">$ build --with-purpose</text>
-    <text x="977" y="375" fill="#82aaff" font-family="Consolas, monospace" font-size="10" text-anchor="end">MAST//IDE</text>
+  <g fill="none" stroke="#8792a8" stroke-width="1.5"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Explorer icon -->
+    <rect x="13" y="72" width="16" height="13" rx="2"/>
+    <path d="M13 76 H29"/>
+    <!-- Search icon -->
+    <circle cx="21" cy="120" r="6"/>
+    <path d="M25.5 124.5 L30 129"/>
+    <!-- Source control icon -->
+    <circle cx="17" cy="166" r="2.5"/>
+    <circle cx="26" cy="157" r="2.5"/>
+    <circle cx="26" cy="175" r="2.5"/>
+    <path d="M17 163.5 V166 Q17 175 26 175"/>
+    <path d="M17 166 Q17 157 26 157"/>
+    <!-- Extensions icon -->
+    <rect x="14" y="203" width="14" height="14" rx="2"/>
+    <path d="M21 203 V217 M14 210 H28"/>
   </g>
+
+  <circle cx="21" cy="400" r="10" fill="#29334a"/>
+  <text x="21" y="404" text-anchor="middle"
+        class="ui" font-size="10" font-weight="600">M</text>
+
+  <!-- Explorer -->
+  <rect x="41" y="48" width="210" height="381" fill="#191f2c"/>
+  <line x1="251" y1="48" x2="251" y2="429" class="line"/>
+
+  <text x="57" y="72" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1.2">EXPLORER</text>
+
+  <text x="57" y="101" class="ui white" font-size="11"
+        font-weight="600">⌄  MAST//PROFILE</text>
+
+  <g class="ui mono" font-size="11">
+    <text x="68" y="128" fill="#82aaff">▾</text>
+    <text x="84" y="128" class="white">profile</text>
+
+    <text x="87" y="154" fill="#89ddff">TS</text>
+    <text x="107" y="154">about.ts</text>
+
+    <text x="87" y="181" fill="#89ddff">TS</text>
+    <text x="107" y="181">projects.ts</text>
+
+    <text x="87" y="208" fill="#89ddff">TS</text>
+    <text x="107" y="208">contact.ts</text>
+
+    <text x="87" y="235" fill="#e5c07b">MD</text>
+    <text x="107" y="235">README.md</text>
+  </g>
+
+  <line x1="41" y1="265" x2="251" y2="265" class="line"/>
+
+  <text x="57" y="289" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1.1">PROJECTS</text>
+
+  <g class="ui" font-size="11">
+    <circle cx="66" cy="315" r="4" fill="#82aaff"/>
+    <text x="79" y="319" class="white">Senora</text>
+
+    <circle cx="66" cy="343" r="4" fill="#c792ea"/>
+    <text x="79" y="347" class="white">FileStreamBot</text>
+  </g>
+
+  <line x1="41" y1="371" x2="251" y2="371" class="line"/>
+
+  <text x="57" y="394" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1.1">WORKSPACE</text>
+  <text x="57" y="413" class="ui small">Independent development</text>
+
+  <!-- Editor tabs -->
+  <rect x="251" y="48" width="529" height="48" fill="#171d29"/>
+  <line x1="251" y1="96" x2="780" y2="96" class="line"/>
+
+  <rect x="252" y="48" width="125" height="47" fill="#202838"/>
+  <rect x="252" y="48" width="125" height="2" fill="url(#accent)"/>
+  <text x="267" y="76" class="mono cyan" font-size="11">TS</text>
+  <text x="285" y="76" class="ui white" font-size="11">about.ts</text>
+  <text x="361" y="76" class="ui muted" font-size="12">×</text>
+
+  <rect x="377" y="48" width="137" height="47" fill="#191f2c"/>
+  <text x="391" y="76" class="mono cyan" font-size="11">TS</text>
+  <text x="410" y="76" class="ui" font-size="11">projects.ts</text>
+
+  <rect x="514" y="48" width="126" height="47" fill="#191f2c"/>
+  <text x="528" y="76" class="mono orange" font-size="11">MD</text>
+  <text x="550" y="76" class="ui" font-size="11">README.md</text>
+
+  <!-- Editor background -->
+  <rect x="251" y="96" width="529" height="230" fill="#171d29"/>
+
+  <!-- Code -->
+  <g clip-path="url(#editorClip)" class="mono code">
+    <rect x="270" y="96" width="1" height="230" fill="#293143"/>
+
+    <g class="muted" text-anchor="end" font-size="11">
+      <text x="291" y="119">1</text>
+      <text x="291" y="138">2</text>
+      <text x="291" y="157">3</text>
+      <text x="291" y="176">4</text>
+      <text x="291" y="195">5</text>
+      <text x="291" y="214">6</text>
+      <text x="291" y="233">7</text>
+      <text x="291" y="252">8</text>
+      <text x="291" y="271">9</text>
+      <text x="291" y="290">10</text>
+      <text x="291" y="309">11</text>
+    </g>
+
+    <text x="310" y="119" class="purple">export const</text>
+    <text x="403" y="119" class="blue">developer</text>
+    <text x="468" y="119" class="white">= {</text>
+
+    <text x="329" y="138" class="cyan">name</text>
+    <text x="367" y="138" class="white">:</text>
+    <text x="380" y="138" class="green">"iaMaSTeR"</text>
+    <text x="453" y="138" class="white">,</text>
+
+    <text x="329" y="157" class="cyan">role</text>
+    <text x="367" y="157" class="white">:</text>
+    <text x="380" y="157" class="green">"Independent Software Developer"</text>
+    <text x="600" y="157" class="white">,</text>
+
+    <text x="329" y="176" class="cyan">approach</text>
+    <text x="394" y="176" class="white">:</text>
+    <text x="407" y="176" class="green">"Build. Learn. Improve."</text>
+    <text x="566" y="176" class="white">,</text>
+
+    <text x="329" y="195" class="cyan">projects</text>
+    <text x="394" y="195" class="white">: [</text>
+
+    <text x="348" y="214" class="green">"Senora"</text>
+    <text x="410" y="214" class="white">,</text>
+    <text x="425" y="214" class="green">"FileStreamBot"</text>
+
+    <text x="329" y="233" class="white">],</text>
+
+    <text x="329" y="252" class="cyan">principles</text>
+    <text x="403" y="252" class="white">: [</text>
+    <text x="357" y="271" class="green">"Clean implementation"</text>
+    <text x="357" y="290" class="green">"Continuous improvement"</text>
+    <text x="329" y="309" class="white">]</text>
+
+    <text x="310" y="328" class="white">};</text>
+  </g>
+
+  <!-- Right information panel -->
+  <rect x="780" y="48" width="219" height="381" fill="#191f2c"/>
+  <line x1="780" y1="48" x2="780" y2="429" class="line"/>
+
+  <text x="798" y="72" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1.1">WORKSPACE OVERVIEW</text>
+
+  <rect x="797" y="91" width="185" height="77" rx="7"
+        fill="#222b3d" stroke="#34415a"/>
+
+  <text x="812" y="113" class="ui muted" font-size="10">FEATURED PROJECTS</text>
+  <text x="812" y="147" class="white" font-size="27"
+        font-family="Consolas, monospace" font-weight="600">02</text>
+  <text x="855" y="145" class="ui muted" font-size="10">public projects</text>
+
+  <rect x="797" y="180" width="185" height="66" rx="7"
+        fill="#202838" stroke="#303b51"/>
+
+  <text x="812" y="202" class="ui muted" font-size="10">DEVELOPER</text>
+  <text x="812" y="225" class="white" font-size="13"
+        font-weight="600">Independent</text>
+  <text x="812" y="239" class="ui muted" font-size="10">Software Developer</text>
+
+  <text x="798" y="277" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1.1">FEATURED REPOSITORIES</text>
+
+  <circle cx="806" cy="300" r="4" fill="#82aaff"/>
+  <text x="818" y="304" class="ui white" font-size="11">Senora</text>
+  <text x="818" y="317" class="ui muted" font-size="9">GitHub repository</text>
+
+  <circle cx="806" cy="341" r="4" fill="#c792ea"/>
+  <text x="818" y="345" class="ui white" font-size="11">FileStreamBot</text>
+  <text x="818" y="358" class="ui muted" font-size="9">GitHub repository</text>
+
+  <line x1="797" y1="379" x2="982" y2="379" class="line"/>
+
+  <text x="798" y="400" class="ui muted" font-size="10">PROFILE</text>
+  <text x="982" y="400" class="blue" font-size="10"
+        text-anchor="end">github.com/iaMaSTeR-Dev</text>
+
+  <!-- Terminal panel -->
+  <rect x="251" y="326" width="529" height="103" fill="#131925"/>
+  <line x1="251" y1="326" x2="780" y2="326" class="line"/>
+
+  <text x="270" y="346" class="ui muted" font-size="10"
+        font-weight="700" letter-spacing="1">TERMINAL</text>
+
+  <text x="350" y="346" class="ui muted" font-size="10">OUTPUT</text>
+  <text x="410" y="346" class="ui muted" font-size="10">DEBUG CONSOLE</text>
+  <line x1="270" y1="352" x2="319" y2="352"
+        stroke="#82aaff" stroke-width="2"/>
+
+  <g class="mono" font-size="11">
+    <text x="270" y="373" class="green">❯</text>
+    <text x="285" y="373" class="white">git status --short</text>
+    <text x="270" y="392" class="muted">Workspace ready.</text>
+    <text x="270" y="411" class="green">❯</text>
+    <rect x="285" y="402" width="7" height="12" fill="#82aaff" opacity=".9"/>
+  </g>
+
+  <!-- Bottom status bar -->
+  <rect x="1" y="429" width="998" height="1" fill="#30394d"/>
 </svg>
