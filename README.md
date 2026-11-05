@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="assets/mast-ide.svg" alt="MAST//IDE — iaMaSTeR Developer Workspace" width="100%" />
+  <img src="assets/master-ide.svg" alt="MASTER//IDE — iaMaSTeR Developer Workspace" width="100%" />
 
   <br/>
 
