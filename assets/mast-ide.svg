@@ -1,0 +1,75 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="350" viewBox="0 0 1000 350">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#171b25"/>
+      <stop offset="1" stop-color="#101217"/>
+    </linearGradient>
+    <linearGradient id="accent" x2="1">
+      <stop stop-color="#78a9ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="348" rx="12" fill="url(#bg)" stroke="#343a48"/>
+
+  <!-- Title bar -->
+  <path d="M13 1 H987 Q999 1 999 13 V43 H1 V13 Q1 1 13 1" fill="#20242e"/>
+  <circle cx="22" cy="22" r="5" fill="#ff5f57"/>
+  <circle cx="40" cy="22" r="5" fill="#febc2e"/>
+  <circle cx="58" cy="22" r="5" fill="#28c840"/>
+  <text x="500" y="26" fill="#aeb7c7" font-family="monospace" font-size="12" text-anchor="middle">MAST//IDE — iaMaSTeR — Workspace</text>
+
+  <!-- Activity bar -->
+  <rect x="1" y="43" width="48" height="270" fill="#191d26"/>
+  <rect x="1" y="58" width="3" height="25" fill="#82aaff"/>
+  <g fill="none" stroke="#8994a8" stroke-width="1.5">
+    <rect x="16" y="63" width="17" height="16" rx="2"/>
+    <circle cx="24" cy="108" r="8"/>
+    <path d="M15 155 L24 146 L33 155 L24 164 Z"/>
+    <path d="M15 198 H33 M15 203 H33 M15 208 H28"/>
+  </g>
+
+  <!-- Explorer -->
+  <rect x="49" y="43" width="205" height="270" fill="#1c2029"/>
+  <text x="66" y="68" fill="#9ca7b8" font-family="monospace" font-size="10" letter-spacing="1.5">EXPLORER</text>
+  <text x="66" y="99" fill="#d8dee9" font-family="monospace" font-size="12">⌄  iaMaSTeR</text>
+  <text x="83" y="126" fill="#83a9df" font-family="monospace" font-size="11">⌄  projects</text>
+  <text x="103" y="151" fill="#d9b779" font-family="monospace" font-size="11">▸ Senora</text>
+  <text x="83" y="181" fill="#83a9df" font-family="monospace" font-size="11">⌄  profile</text>
+  <text x="103" y="206" fill="#9bc88e" font-family="monospace" font-size="11">◈ about.ts</text>
+  <text x="103" y="231" fill="#9bc88e" font-family="monospace" font-size="11">◈ stack.json</text>
+  <text x="103" y="256" fill="#9bc88e" font-family="monospace" font-size="11">◈ contact.ts</text>
+  <text x="66" y="293" fill="#667184" font-family="monospace" font-size="9">WORKSPACE / 01</text>
+
+  <!-- Editor tabs -->
+  <rect x="254" y="43" width="746" height="36" fill="#1b1f28"/>
+  <rect x="254" y="43" width="120" height="36" fill="#242a35"/>
+  <rect x="254" y="77" width="120" height="2" fill="url(#accent)"/>
+  <text x="270" y="65" fill="#c4d4ed" font-family="monospace" font-size="11">◈ about.ts</text>
+  <text x="392" y="65" fill="#79869b" font-family="monospace" font-size="11">stack.json</text>
+
+  <!-- Code editor -->
+  <rect x="254" y="79" width="746" height="234" fill="#151820"/>
+  <g font-family="monospace" font-size="13">
+    <g fill="#596477" text-anchor="end">
+      <text x="289" y="111">1</text><text x="289" y="137">2</text>
+      <text x="289" y="163">3</text><text x="289" y="189">4</text>
+      <text x="289" y="215">5</text><text x="289" y="241">6</text>
+      <text x="289" y="267">7</text><text x="289" y="293">8</text>
+    </g>
+    <text x="309" y="111" fill="#c792ea">export const <tspan fill="#82aaff">developer</tspan> = {'{'}</text>
+    <text x="309" y="137" fill="#9cdcfe">name: <tspan fill="#ce9178">"iaMaSTeR"</tspan>,</text>
+    <text x="309" y="163" fill="#9cdcfe">role: <tspan fill="#ce9178">"Software Engineer"</tspan>,</text>
+    <text x="309" y="189" fill="#9cdcfe">focus: <tspan fill="#ce9178">"Building real software"</tspan>,</text>
+    <text x="309" y="215" fill="#9cdcfe">interests: <tspan fill="#ce9178">["Systems", "Architecture"]</tspan></text>
+    <text x="309" y="241" fill="#c792ea">{'}'};</text>
+    <text x="309" y="293" fill="#6b9b75">// Think clearly. Build deliberately.</text>
+  </g>
+
+  <!-- Terminal -->
+  <rect x="254" y="313" width="746" height="36" fill="#20242e"/>
+  <text x="270" y="335" fill="#9ca7b8" font-family="monospace" font-size="10">TERMINAL</text>
+  <text x="380" y="335" fill="#86c995" font-family="monospace" font-size="11">$ ready_to_build --next</text>
+  <text x="979" y="335" fill="#82aaff" font-family="monospace" font-size="10" text-anchor="end">MAST//IDE</text>
+</svg>
