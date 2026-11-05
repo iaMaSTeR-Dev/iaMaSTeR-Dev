@@ -1,26 +1,25 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="370" viewBox="0 0 1000 370" role="img" aria-labelledby="title desc">
-  <title id="title">MAST IDE — iaMaSTeR Developer Workspace</title>
-  <desc id="desc">A dark code editor interface introducing iaMaSTeR and featuring the Senora and FileStreamBot projects.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title desc">
+  <title id="title">MAST//IDE — iaMaSTeR</title>
+  <desc id="desc">A custom dark IDE workspace showing the developer profile, two selected projects, and contact links.</desc>
 
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#191e29"/>
-      <stop offset="100%" stop-color="#10131a"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191e29"/>
+      <stop offset="1" stop-color="#10131a"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#78a9ff"/>
-      <stop offset="100%" stop-color="#b69cff"/>
+      <stop offset="0" stop-color="#78a9ff"/>
+      <stop offset="1" stop-color="#b69cff"/>
     </linearGradient>
-    <clipPath id="windowClip">
-      <rect x="1" y="1" width="998" height="368" rx="12"/>
+    <clipPath id="window">
+      <rect x="1" y="1" width="998" height="388" rx="12"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#windowClip)">
-    <!-- Window -->
-    <rect width="1000" height="370" fill="url(#background)"/>
-    <rect x="1" y="1" width="998" height="368" rx="12" fill="none" stroke="#343b4a"/>
+  <g clip-path="url(#window)">
+    <rect width="1000" height="390" fill="url(#bg)"/>
+    <rect x="1" y="1" width="998" height="388" rx="12" fill="none" stroke="#343b4a"/>
 
     <!-- Title bar -->
     <rect width="1000" height="44" fill="#202530"/>
@@ -28,10 +27,9 @@
     <circle cx="40" cy="22" r="5" fill="#ffc04d"/>
     <circle cx="58" cy="22" r="5" fill="#35c96f"/>
     <text x="500" y="26" fill="#aab5c7" font-family="Consolas, monospace" font-size="12" text-anchor="middle">MAST//IDE — iaMaSTeR — Workspace</text>
-    <text x="976" y="26" fill="#758197" font-family="Consolas, monospace" font-size="10" text-anchor="end">●</text>
 
     <!-- Activity bar -->
-    <rect x="0" y="44" width="49" height="288" fill="#191e27"/>
+    <rect x="0" y="44" width="49" height="308" fill="#191e27"/>
     <rect x="0" y="59" width="3" height="26" fill="#82aaff"/>
     <g fill="none" stroke="#8793a7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <rect x="16" y="64" width="17" height="16" rx="2"/>
@@ -43,7 +41,7 @@
     </g>
 
     <!-- Explorer -->
-    <rect x="49" y="44" width="205" height="288" fill="#1c222d"/>
+    <rect x="49" y="44" width="205" height="308" fill="#1c222d"/>
     <text x="66" y="69" fill="#a3adbd" font-family="Consolas, monospace" font-size="10" letter-spacing="1.4">EXPLORER</text>
     <text x="66" y="101" fill="#dce3ef" font-family="Consolas, monospace" font-size="12">⌄  iaMaSTeR</text>
 
@@ -56,17 +54,17 @@
     <text x="82" y="226" fill="#83aaff" font-family="Consolas, monospace" font-size="11">⌄  profile</text>
     <text x="101" y="252" fill="#9bc88e" font-family="Consolas, monospace" font-size="11">◈ about.ts</text>
     <text x="101" y="278" fill="#9bc88e" font-family="Consolas, monospace" font-size="11">◈ README.md</text>
-    <text x="66" y="316" fill="#657187" font-family="Consolas, monospace" font-size="9">WORKSPACE / 01</text>
+    <text x="66" y="335" fill="#657187" font-family="Consolas, monospace" font-size="9">WORKSPACE / 01</text>
 
-    <!-- Editor tabs -->
+    <!-- Tabs -->
     <rect x="254" y="44" width="746" height="36" fill="#1b202a"/>
     <rect x="254" y="44" width="133" height="36" fill="#252c38"/>
     <rect x="254" y="77" width="133" height="2" fill="url(#accent)"/>
     <text x="270" y="66" fill="#c9d8ee" font-family="Consolas, monospace" font-size="11">◈ about.ts</text>
     <text x="407" y="66" fill="#7d899c" font-family="Consolas, monospace" font-size="11">README.md</text>
 
-    <!-- Editor canvas -->
-    <rect x="254" y="80" width="746" height="252" fill="#151922"/>
+    <!-- Editor -->
+    <rect x="254" y="80" width="746" height="272" fill="#151922"/>
     <g font-family="Consolas, monospace" font-size="13">
       <g fill="#586579" text-anchor="end">
         <text x="291" y="111">1</text>
@@ -77,6 +75,7 @@
         <text x="291" y="241">6</text>
         <text x="291" y="267">7</text>
         <text x="291" y="293">8</text>
+        <text x="291" y="319">9</text>
       </g>
 
       <text x="310" y="111" fill="#c792ea">export const <tspan fill="#82aaff">developer</tspan> = {</text>
@@ -85,15 +84,16 @@
       <text x="310" y="189" fill="#9cdcfe">  projects: [</text>
       <text x="310" y="215" fill="#ce9178">    "Senora",</text>
       <text x="310" y="241" fill="#ce9178">    "FileStreamBot"</text>
-      <text x="310" y="267" fill="#9cdcfe">  ]</text>
-      <text x="310" y="293" fill="#c792ea">};</text>
+      <text x="310" y="267" fill="#9cdcfe">  ],</text>
+      <text x="310" y="293" fill="#9cdcfe">  contact: <tspan fill="#ce9178">"GitHub / Telegram"</tspan></text>
+      <text x="310" y="319" fill="#c792ea">};</text>
     </g>
 
-    <!-- Bottom terminal -->
-    <rect x="254" y="332" width="746" height="38" fill="#202530"/>
-    <line x1="254" y1="332" x2="1000" y2="332" stroke="#343b4a"/>
-    <text x="271" y="355" fill="#a4afc1" font-family="Consolas, monospace" font-size="10" letter-spacing="1">TERMINAL</text>
-    <text x="380" y="355" fill="#86c995" font-family="Consolas, monospace" font-size="11">$ build --with-purpose</text>
-    <text x="977" y="355" fill="#82aaff" font-family="Consolas, monospace" font-size="10" text-anchor="end">MAST//IDE</text>
+    <!-- Terminal -->
+    <rect x="254" y="352" width="746" height="38" fill="#202530"/>
+    <line x1="254" y1="352" x2="1000" y2="352" stroke="#343b4a"/>
+    <text x="271" y="375" fill="#a4afc1" font-family="Consolas, monospace" font-size="10" letter-spacing="1">TERMINAL</text>
+    <text x="380" y="375" fill="#86c995" font-family="Consolas, monospace" font-size="11">$ build --with-purpose</text>
+    <text x="977" y="375" fill="#82aaff" font-family="Consolas, monospace" font-size="10" text-anchor="end">MAST//IDE</text>
   </g>
 </svg>
